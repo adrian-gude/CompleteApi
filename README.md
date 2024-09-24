@@ -31,12 +31,12 @@
 
 3. Access the API at: http://localhost:8000
 
-### Usage
+## Usage
 
 You can access the automatically generated interactive API documentation at http://localhost:8000/docs.
 You can test the endpoints using tools like cURL or Postman.
 
-### Main Endpoints
+## Main Endpoints
 
 - POST /items/: Create a new item.
 - GET /items/{id}: Get details of a specific item.
