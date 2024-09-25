@@ -42,6 +42,25 @@ async def create_item(item: ItemCreate):
         cursor.close()
         connection.close()
 
+@app.get("/items/")
+async def read_items():
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    try:
+        select_query = "SELECT  *, name FROM items;"
+        cursor.execute(select_query)
+        items = cursor.fetchall()
+        
+        return items
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading items: {e}")
+
+    finally:
+        cursor.close()
+        connection.close()
+
 
 @app.get("/items/{item_id}", response_model=Item)
 async def read_item(item_id: int):
