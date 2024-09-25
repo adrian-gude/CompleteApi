@@ -40,5 +40,6 @@ You can test the endpoints using tools like cURL or Postman.
 
 - POST /items/: Create a new item.
 - GET /items/{id}: Get details of a specific item.
+- GET /items/: Get details of all items saved on db
 - PUT /items/{id}: Update an existing item.
 - DELETE /items/{id}: Delete an item.
